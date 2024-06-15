@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "crimson-code-extractor"
 version = "0.1.0"
-description = From source code, extract useful information.
+description = "From source code, extract useful information."
 readme = "README.md"
 authors = [
   { name="Sisung Kim", email="sisung.kim1@gmail.com" },
@@ -22,6 +22,7 @@ classifiers = [
 ]
 dependencies = [
     "pydantic",
+    "crimson-data-class",
 ]
 requires-python = ">=3.9"
 

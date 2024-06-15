@@ -1,8 +1,16 @@
 {
-    "editor.foldingStrategy": "indentation",
-    "editor.foldRegions": {
-        "start": "^\\s*#\\s*region\\b",
-        "end": "^\\s*#\\s*endregion\\b"
-    },
-    "editor.defaultFoldingImportLevel": 2
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+    }
+
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./tests",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true,
+    "workbench.settings.openDefaultSettings": true
 }
