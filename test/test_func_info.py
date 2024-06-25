@@ -1,7 +1,7 @@
 import unittest
 from typing import Dict, Tuple, Optional
 import inspect
-from crimson.code_extractor.func_info import (
+from crimson.code_extractor.beta.func_info import (
     extract_return_type,
     extract_arg_info,
     extract_return_info,
