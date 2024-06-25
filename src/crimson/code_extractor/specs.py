@@ -5,7 +5,7 @@ from pydantic import BaseModel
 class ArgSpec(BaseModel):
     name: str
     type: Literal["positional", "vararg", "kwonlyarg", "kwarg"]
-    annotation: str
+    annotation: Optional[str] = None
     default: Optional[str] = None
 
 
