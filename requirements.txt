@@ -1,4 +1,5 @@
 pydantic
-pandas
-coverage
-crimson-data-class
+pytest
+pytest-cov
+crimson-ast-dev-tool
+jinja2
