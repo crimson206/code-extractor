@@ -76,7 +76,7 @@ def extract_special_arg_specs(
             ArgSpec(
                 name=kwarg.arg,
                 type="kwarg",
-                annotation=safe_unparse(kwarg.annotation),
+                annotation=None,
             )
         )
 
