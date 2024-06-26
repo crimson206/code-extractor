@@ -118,9 +118,9 @@ def extract_return_annotation(function_node: ast.FunctionDef) -> Optional[str]:
 
 def extract_doc(function_node: ast.FunctionDef) -> Optional[str]:
     if isinstance(function_node.body[0], ast.Expr):
-        if type(function_node.body[0].value.value) is str:
-            return function_node.body[0].value.value
-
+        if isinstance(function_node.body[0].value, ast.Constant):
+            if type(function_node.body[0].value.value) is str:
+                return function_node.body[0].value.value
     return None
 
 
