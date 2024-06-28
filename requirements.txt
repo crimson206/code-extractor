@@ -1,5 +1,2 @@
 pydantic
-pytest
-pytest-cov
 crimson-ast-dev-tool
-jinja2
