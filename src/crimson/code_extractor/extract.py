@@ -1,4 +1,4 @@
-from crimson.ast_dev_tool import safe_unparse, collect_nodes, get_first_node
+from crimson.ast_dev_tool import safe_unparse, collect_nodes
 from .specs import ArgSpec, ReturnSpec, FuncSpec
 from typing import List, Optional
 import ast
@@ -11,7 +11,7 @@ def extract_positional_arg_specs(
     function_node: ast.FunctionDef,
 ) -> Optional[List[ArgSpec]]:
     arg_specs = []
-    arguments_node: ast.arguments = get_first_node(function_node, ast.arguments)
+    arguments_node: ast.arguments = collect_nodes(function_node, ast.arguments)[0]
     if arguments_node is None:
         arg_specs = []
         return arg_specs
@@ -43,7 +43,7 @@ def extract_special_arg_specs(
     function_node: ast.FunctionDef,
 ) -> Optional[List[ArgSpec]]:
     arg_specs = []
-    arguments_node: ast.arguments = get_first_node(function_node, ast.arguments)
+    arguments_node: ast.arguments = collect_nodes(function_node, ast.arguments)[0]
 
     if arguments_node is None:
         arg_specs = []
